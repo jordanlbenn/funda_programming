@@ -57,12 +57,37 @@ print(first_name + ' ' + last_name + ':' + str(age))
 print('Hello' * 3)
 # Can only add two strings and only multiply a string with an int 
 '''
-
+'''
 # Accessing string characters
 emp_name: str = "Jane Doe"
 print(emp_name[3])
 # print(emp_name[8]) # throws index out of bounds error because the last char is at idx 7
 
 print(emp_name.index('n'))
+'''
 
+### STRING SLICING ###
+emp_name = "Jane Doe"
+print(emp_name[2:6])
+print(emp_name[:4])  # --> When you leave the first index blank it'll start off from the first index automatically
+# and go to the fourth
+print(emp_name[2:])
+print(emp_name[-4:-1])
+print(emp_name[1:6:2]) # --> Does every other letter because of the numbers from index 1-6 but only highlighting 2nd
+# numbers because of the '2'.
 
+print(emp_name.count('e'))  # Shows the index for the letter 'e' in the name Jane Doe
+print(emp_name.find('Doe'))  # Returns where the name 'Doe' starts in the index
+
+print(emp_name.replace('Jane', "John")) # The program will automatically add in the words 'old' and 'new'
+# Memebership Test
+print("oh" in emp_name)   # --> Since the emp_name is 'Jane Doe' it won't find 'oh' in the name. thus returning with a "False" response
+
+# String Formatting
+student_name= "Alice"
+score = 87
+
+print(student_name + ':' + str(score))  #Long and drawn out code, it's good and gets the job done but its not the quickest and most efficent way.
+# f-strings
+print(f'Name: {student_name} Score: {score}')
+print(f'10 times 3 is {10*3}')
